@@ -1,12 +1,12 @@
 module JobsHelper
 
   def render_job_status(job)
-    if job.is_hedden
-      "(hidden)"
+    if job.is_hidden
+      content_tag(:span, "", :class => "fa fa-eye-slash")
     else
-      "(public)"
+      content_tag(:span, "", :class => "fa fa-eye")
     end
   end
 
-  
+
 end
