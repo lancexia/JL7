@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   resources :jobs do
     resources :resumes
   end
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :resumes
 
 
   root 'jobs#index'
